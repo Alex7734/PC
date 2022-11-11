@@ -29,10 +29,9 @@ char *fraction_toString(const int *fraction) {
         return result;
     }
 
-    // Am scris codul asta singur acum 5 minute si am uitat ce face jumate din el
-    // Pot spune ca mi am pierdut ore din viata pentru nimic :)
-
     fraction_simplify(fraction);
+    
+    // Sper ca are sens ce am facut aici
     char buff[10];
     itoa(fraction[0], buff, 10);
     int k = 0;
@@ -45,11 +44,12 @@ char *fraction_toString(const int *fraction) {
         return result;
     }
     else {
-        // Inca nu stiu de ce doar asta merge dar merge
+        // Aparent asa concatenezi stringuri in C ???
         strncat(result, "/", 1);
         k++;
         result[k] = '/';
-
+        
+        // Puteam face o functie dar lenea e mare 
         char buff2[10];
         itoa(fraction[1], buff2, 10);
         for (int i = 0; i < strlen(buff2); i++) {
