@@ -20,8 +20,9 @@ char *fraction_toString(const int *fraction) {
     }
 
     setErrorInfo(OK);
-
-    // Incep sa stiu ce face dar tot nu stiu defapt ce face
+    
+    // Nici eu nu stiu ce face dar asa zicea StackOverflow
+    // Inteleg conceput - nu vreau sa stiu ce ma asteapta
     char *result = calloc(100, sizeof(*result));
 
     if (fraction[0] == 0){
