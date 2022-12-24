@@ -1,13 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-/*
- *
-  3.2. Se va scrie o funcţie care să realizeze extragerea dintr-un şir de caractere sursă a
-  unui subşir specificat prin poziţia în cadrul sursei şi a numărului de caractere extrase.
- *
- */
-
 char* read_string() {
     int size = 8;// Size of the string
     char* str = malloc(size);  // Pointer to the dynamic string
