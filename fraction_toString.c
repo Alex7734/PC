@@ -20,9 +20,7 @@ char *fraction_toString(const int *fraction) {
     }
 
     setErrorInfo(OK);
-    
-    // Nici eu nu stiu ce face dar asa zicea StackOverflow
-    // Inteleg conceput - nu vreau sa stiu ce ma asteapta
+
     char *result = calloc(100, sizeof(*result));
 
     if (fraction[0] == 0){
@@ -32,7 +30,6 @@ char *fraction_toString(const int *fraction) {
 
     fraction_simplify(fraction);
     
-    // Sper ca are sens ce am facut aici
     char buff[10];
     itoa(fraction[0], buff, 10);
     int k = 0;
@@ -45,12 +42,10 @@ char *fraction_toString(const int *fraction) {
         return result;
     }
     else {
-        // Aparent asa concatenezi stringuri in C ???
         strncat(result, "/", 1);
         k++;
         result[k] = '/';
         
-        // Puteam face o functie dar lenea e mare 
         char buff2[10];
         itoa(fraction[1], buff2, 10);
         for (int i = 0; i < strlen(buff2); i++) {
