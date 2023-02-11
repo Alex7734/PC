@@ -1,7 +1,4 @@
-
-/*
-
- #include <stdio.h>
+#include <stdio.h>
 #include <string.h>
 
 #define MAX_WORD_LENGTH 20
@@ -81,4 +78,3 @@ int main() {
     display_board(first_word, second_word);
     return 0;
 }
- */
